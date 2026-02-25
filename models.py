@@ -4,9 +4,8 @@ import random
 from tqdm import tqdm
 
 
-# =============================================================================
-# POCKET PERCEPTRON
-# =============================================================================
+# pocket perceptron
+
 
 class PocketPerceptron:
 
@@ -77,9 +76,9 @@ class PocketPerceptron:
         self.w = w
 
 
-# =============================================================================
-# REGRESSÃO LINEAR
-# =============================================================================
+
+# regressão linear
+
 
 class LinearRegression:
 
@@ -106,9 +105,9 @@ class LinearRegression:
         return self.w
 
 
-# =============================================================================
-# REGRESSÃO LOGÍSTICA
-# =============================================================================
+
+# regressao logística 
+
 
 class LogisticRegression:
 
@@ -191,9 +190,9 @@ class LogisticRegression:
         self.w = np.array(w, dtype=np.float64)
 
 
-# =============================================================================
-# ONE VS ALL
-# =============================================================================
+
+# um contra todos
+
 
 class OneVsAll:
 
