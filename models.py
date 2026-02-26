@@ -135,18 +135,13 @@ class LogisticRegression:
         y = np.array(y, dtype=np.float64)
         N, d = X.shape
 
-        self.w = np.zeros(d)  # inicialização com zeros, mais estável que aleatório
+        self.w = np.zeros(d)  # inicialização com zeros
         self.cost_history = []
 
         for t in tqdm(range(self.iterations), desc='Treinando Regressão Logística'):
-            # mini-batch
-            if self.batch_size < N:
-                idx = np.random.choice(N, self.batch_size, replace=False)
-                X_b = X[idx]
-                y_b = y[idx]
-            else:
-                X_b, y_b = X, y
-
+            idx = np.random.choice(N, self.batch_size, replace=False)
+            X_b = X[idx]
+            y_b = y[idx]
             N_b = len(X_b)
 
             z = y_b * (X_b @ self.w)
